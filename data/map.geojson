@@ -1,0 +1,341 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "nama": "Candi Borobudur",
+        "kategori": "Budaya",
+        "short_desc": "Candi Buddha terbesar dan situs UNESCO.",
+        "long_desc": "Borobudur adalah warisan dunia UNESCO yang menampilkan relief yang kaya dan pemandangan matahari terbit yang menakjubkan.",
+        "hours": "06:00 - 17:00",
+        "price": "Rp 50.000 - Rp 350.000 (tergantung kategori pengunjung)",
+        "rating": 4.8,
+        "tags": ["ikon", "sejarah"],
+        "location": "Magelang, Jawa Tengah",
+        "images": [
+          "https://images.unsplash.com/photo-1582515073490-39981397c445?w=800",
+          "https://images.unsplash.com/photo-1582515073490-39981397c445?w=800",
+          "https://images.unsplash.com/photo-1582515073490-39981397c445?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.203751, -7.607874]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "nama": "Gunung Bromo",
+        "kategori": "Alam",
+        "short_desc": "Gunung berapi dengan pemandangan laut pasir.",
+        "long_desc": "Bromo menawarkan pemandangan matahari terbit spektakuler dan akses ke kaldera yang luas.",
+        "hours": "Buka 24 jam",
+        "price": "Rp 30.000 - Rp 100.000",
+        "rating": 4.7,
+        "tags": ["gunung", "sunrise"],
+        "location": "Probolinggo, Jawa Timur",
+        "images": [
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.953, -7.9425]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "nama": "Tanah Lot",
+        "kategori": "Alam",
+        "short_desc": "Pura di atas batu karang di tepi laut Bali.",
+        "long_desc": "Tanah Lot terkenal dengan pemandangan matahari terbenam dan upacara keagamaan lokal.",
+        "hours": "08:00 - 19:00",
+        "price": "Rp 20.000",
+        "rating": 4.5,
+        "tags": ["pura", "pantai"],
+        "location": "Tabanan, Bali",
+        "images": [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.0867, -8.6216]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "nama": "Taman Nasional Komodo",
+        "kategori": "Alam",
+        "short_desc": "Rumah kadal raksasa Komodo dan pemandangan pulau eksotis.",
+        "long_desc": "Kegiatan snorkel, hiking, dan melihat satwa langka Komodo di habitat aslinya.",
+        "hours": "08:00 - 16:00",
+        "price": "Rp 100.000+",
+        "rating": 4.6,
+        "tags": ["konservasi", "pulau"],
+        "location": "Manggarai Barat, Nusa Tenggara Timur",
+        "images": [
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.4918, -8.5404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "nama": "Raja Ampat",
+        "kategori": "Alam",
+        "short_desc": "Surganya diving dengan keanekaragaman hayati laut tinggi.",
+        "long_desc": "Raja Ampat menawarkan spot menyelam kelas dunia dan pemandangan pulau-pulau capricious.",
+        "hours": "Buka 24 jam",
+        "price": "Estimasi paket tur",
+        "rating": 4.9,
+        "tags": ["diving", "laut"],
+        "location": "Papua Barat",
+        "images": [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [130.565, -0.234]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "nama": "Pantai Kuta",
+        "kategori": "Alam",
+        "short_desc": "Pantai terkenal dengan ombak untuk berselancar.",
+        "long_desc": "Pantai Kuta adalah pantai terkenal di Bali yang menawarkan pasir putih, ombak yang cocok untuk berselancar, dan matahari terbenam yang indah.",
+        "hours": "24 jam",
+        "price": "Gratis (Pantai), Rp 10.000 (Parkir)",
+        "rating": 4.0,
+        "tags": ["pantai", "surfer"],
+        "location": "Badung, Bali",
+        "images": [
+          "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800",
+          "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800",
+          "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.1671, -8.7203]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "nama": "Malioboro Street",
+        "kategori": "Kuliner",
+        "short_desc": "Jalan utama dengan pedagang kaki lima khas Yogyakarta.",
+        "long_desc": "Jl. Malioboro adalah jalan utama di Yogyakarta yang terkenal dengan pedagang kaki lima, oleh-oleh khas, dan budaya jalanan.",
+        "hours": "24 jam (pedagang bervariasi)",
+        "price": "Gratis",
+        "rating": 4.0,
+        "tags": ["belanja", "kuliner"],
+        "location": "Yogyakarta, DIY",
+        "images": [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.3695, -7.7956]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "nama": "Candi Prambanan",
+        "kategori": "Sejarah",
+        "short_desc": "Kompleks candi Hindu terbesar di Indonesia.",
+        "long_desc": "Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia, dibangun pada abad ke-9. Dikelilingi oleh taman yang indah.",
+        "hours": "06:00 - 17:00",
+        "price": "Rp 50.000 (Domestik), Rp 400.000 (Internasional)",
+        "rating": 5.0,
+        "tags": ["candi", "hindu"],
+        "location": "Sleman, DIY",
+        "images": [
+          "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800",
+          "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800",
+          "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.4915, -7.7520]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "nama": "Danau Toba",
+        "kategori": "Alam",
+        "short_desc": "Danau vulkanik terbesar di dunia.",
+        "long_desc": "Danau Toba adalah danau vulkanik terbesar di dunia, terbentuk dari letusan supervulkanik sekitar 75.000 tahun yang lalu.",
+        "hours": "24 jam",
+        "price": "Rp 5.000 (Parkir)",
+        "rating": 4.0,
+        "tags": ["danau", "vulkanik"],
+        "location": "Samosir, Sumatera Utara",
+        "images": [
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [98.8756, 2.6845]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "nama": "Pantai Sanur",
+        "kategori": "Alam",
+        "short_desc": "Pantai tenang dengan suasana yang lebih santai.",
+        "long_desc": "Pantai Sanur adalah pantai yang lebih tenang dibandingkan Kuta, cocok untuk keluarga dengan ombak yang lebih kecil.",
+        "hours": "24 jam",
+        "price": "Gratis (Pantai), Rp 5.000 (Parkir)",
+        "rating": 4.0,
+        "tags": ["pantai", "keluarga"],
+        "location": "Denpasar, Bali",
+        "images": [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [115.2625, -8.7058]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "nama": "Monas",
+        "kategori": "Sejarah",
+        "short_desc": "Monumen Nasional sebagai simbol perjuangan bangsa.",
+        "long_desc": "Monumen Nasional atau Monas adalah monumen peringatan yang dibangun untuk mengenang perlawanan dan perjuangan rakyat Indonesia.",
+        "hours": "08:00 - 15:00",
+        "price": "Rp 5.000 (Domestik), Rp 15.000 (Internasional)",
+        "rating": 4.0,
+        "tags": ["monumen", "nasional"],
+        "location": "Jakarta Pusat, DKI Jakarta",
+        "images": [
+          "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800",
+          "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800",
+          "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8272, -6.1754]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "nama": "Gunung Rinjani",
+        "kategori": "Alam",
+        "short_desc": "Gunung berapi tertinggi kedua di Indonesia.",
+        "long_desc": "Gunung Rinjani adalah gunung berapi aktif tertinggi kedua di Indonesia dengan ketinggian 3.726 mdpl.",
+        "hours": "24 jam (akses terbatas)",
+        "price": "Rp 150.000 (Parkir)",
+        "rating": 5.0,
+        "tags": ["gunung", "pendakian"],
+        "location": "Lombok, NTB",
+        "images": [
+          "https://images.unsplash.com/photo-1464822759844-d150f38d609b?w=800",
+          "https://images.unsplash.com/photo-1464822759844-d150f38d609b?w=800",
+          "https://images.unsplash.com/photo-1464822759844-d150f38d609b?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.4578, -8.4115]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "nama": "Kawah Ijen",
+        "kategori": "Alam",
+        "short_desc": "Kawah dengan fenomena blue fire yang langka.",
+        "long_desc": "Kawah Ijen terkenal dengan fenomena blue fire yang langka dan pemandangan sunrise yang spektakuler.",
+        "hours": "24 jam (akses terbatas)",
+        "price": "Rp 100.000 (Parkir)",
+        "rating": 5.0,
+        "tags": ["kawah", "bluefire"],
+        "location": "Banyuwangi, Jawa Timur",
+        "images": [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.2423, -8.0588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "nama": "Pantai Parangtritis",
+        "kategori": "Alam",
+        "short_desc": "Pantai dengan legenda Nyi Roro Kidul.",
+        "long_desc": "Pantai Parangtritis adalah pantai yang terkenal dengan legenda Nyi Roro Kidul dan ombak yang besar.",
+        "hours": "24 jam",
+        "price": "Rp 5.000 (Parkir)",
+        "rating": 4.0,
+        "tags": ["pantai", "legenda"],
+        "location": "Bantul, DIY",
+        "images": [
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.3306, -8.0250]
+      }
+    }
+  ]
+}

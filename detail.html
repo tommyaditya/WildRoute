@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Destinasi - Peta Pariwisata Indonesia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+                <span>Kembali</span>
+            </button>
+            <div class="header-center">
+                <h1 class="header-title">Detail Destinasi</h1>
+                <div class="header-subtitle">Peta Pariwisata Indonesia</div>
+            </div>
+            <div class="header-actions">
+                <button class="action-btn" onclick="shareDestination()">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+                <button class="action-btn" onclick="toggleFavorite()">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+        </div>
+        <div class="header-decoration">
+            <div class="decoration-line"></div>
+            <div class="decoration-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <p>Memuat data destinasi...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error hidden">
+            <div class="error-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Data tidak ditemukan</h2>
+                <p>Maaf, destinasi yang Anda cari tidak dapat ditemukan.</p>
+                <button class="retry-btn" onclick="retryLoad()">
+                    <i class="fas fa-refresh"></i>
+                    Coba Lagi
+                </button>
+            </div>
+        </div>
+
+        <!-- Detail Content -->
+        <main id="detail-content" class="detail-content hidden">
+            <!-- Hero Section with Main Image -->
+            <div class="hero-section">
+                <div class="hero-image">
+                    <img id="main-image" src="" alt="Gambar utama destinasi">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <div class="hero-category" id="hero-category">
+                                <i class="fas fa-tag"></i>
+                                <span>Kategori</span>
+                            </div>
+                            <h1 id="hero-title">Nama Destinasi</h1>
+                            <div class="hero-rating" id="hero-rating">
+                                <div class="stars" id="rating-stars"></div>
+                                <span class="rating-text" id="rating-text">0.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="quick-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-content">
+                        <h3>Lokasi</h3>
+                        <p id="location-text">Lokasi</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="info-content">
+                        <h3>Jam Operasional</h3>
+                        <p id="hours-text">-</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div class="info-content">
+                        <h3>Harga Tiket</h3>
+                        <p id="price-text">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section">
+                <h2>Tentang Destinasi</h2>
+                <p id="description-text">Deskripsi destinasi akan dimuat di sini...</p>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <h2>Galeri Foto</h2>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery images will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Tags Section -->
+            <div class="tags-section" id="tags-section">
+                <h2>Tag Populer</h2>
+                <div class="tags-container" id="tags-container">
+                    <!-- Tags will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Rating and Comments Section -->
+            <div class="rating-comments-section">
+                <h2>Rating & Ulasan</h2>
+
+                <!-- User Rating Form -->
+                <div class="rating-form">
+                    <h3>Beri Rating Anda</h3>
+                    <div class="star-rating-input">
+                        <span class="rating-label">Rating:</span>
+                        <div class="stars-input" id="stars-input">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <div class="comment-form">
+                        <textarea id="comment-input" placeholder="Tulis ulasan Anda..." rows="4"></textarea>
+                        <button id="submit-review" class="submit-btn">Kirim Ulasan</button>
+                    </div>
+                </div>
+
+                <!-- Comments List -->
+                <div class="comments-list" id="comments-list">
+                    <!-- Comments will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/detail.js"></script>
+</body>
+</html>

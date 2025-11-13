@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Pariwisata Interaktif - Jelajahi Indonesia</title>
+    <meta name="description" content="Peta interaktif destinasi wisata Indonesia dengan fitur pencarian, filter, dan favorit.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <a href="index.html">Peta Pariwisata</a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="#map" class="nav-link active">Peta</a></li>
+                    <li><a href="#favorites" class="nav-link">Favorit</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="map-container">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>Cari Destinasi</h2>
+                <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+
+            <div class="search-section">
+                <div class="search-input-container">
+                    <input type="text" id="search-input" placeholder="Cari destinasi..." aria-label="Search destinations">
+                    <button id="clear-search" class="clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="filters-section">
+                <h3>Filter Kategori</h3>
+                <div class="filter-group">
+                <div class="filter-options" id="category-filters">
+                    <button class="filter-btn active" data-category="all" title="Semua Kategori">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="filter-btn" data-category="alam" title="Alam">
+                        <i class="fas fa-tree"></i>
+                    </button>
+                    <button class="filter-btn" data-category="budaya" title="Budaya">
+                        <i class="fas fa-landmark"></i>
+                    </button>
+                    <button class="filter-btn" data-category="kuliner" title="Kuliner">
+                        <i class="fas fa-utensils"></i>
+                    </button>
+                    <button class="filter-btn" data-category="sejarah" title="Sejarah">
+                        <i class="fas fa-monument"></i>
+                    </button>
+                </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Filter Rating</h4>
+                    <div class="rating-filters" style="display: flex; flex-direction: row; gap: 10px;">
+                        <label class="rating-option">
+                            <input type="checkbox" value="4">
+                            <span class="rating-stars">★4</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="checkbox" value="3">
+                            <span class="rating-stars">★3</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="checkbox" value="2">
+                            <span class="rating-stars">★2</span>
+                        </label>
+                        <label class="rating-option">
+                            <input type="checkbox" value="1">
+                            <span class="rating-stars">★1</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>List Pariwisata</h4>
+                    <div class="tourism-list">
+                        <!-- Tourism list will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-header">
+                    <h3>Hasil Pencarian</h3>
+                    <span id="results-count" class="results-count">0 destinasi</span>
+                </div>
+                <div id="results-list" class="results-list">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+            </div>
+        </aside>
+
+        <div id="map" class="map"></div>
+
+        <div class="fab-container">
+            <button id="location-btn" class="fab-btn" aria-label="Find my location">
+                <i class="fas fa-location-arrow"></i>
+                <span class="fab-label">Temukan Lokasi Saya</span>
+            </button>
+            <button id="favorites-btn" class="fab-btn" aria-label="View favorites">
+                <i class="fas fa-heart"></i>
+                <span id="favorites-count" class="fab-badge">0</span>
+            </button>
+        </div>
+
+        <!-- Weather Widget -->
+        <div id="weather-widget" class="weather-widget">
+            <div class="weather-header">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Cuaca</span>
+            </div>
+            <div id="weather-content" class="weather-content">
+                <!-- Weather data will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Favorites Modal -->
+        <div id="favorites-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Destinasi Favorit</h3>
+                    <button class="modal-close" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="favorites-list" class="favorites-list">
+                    <!-- Favorites will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/map.js"></script>
+</body>
+</html>
